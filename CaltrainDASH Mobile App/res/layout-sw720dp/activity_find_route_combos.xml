@@ -1,0 +1,397 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/activity_padding"
+    android:background="@drawable/combo_background"
+    tools:context=".FindRouteCombosActivity" >
+	<LinearLayout 
+	    android:id="@+id/rc_header"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:padding="@dimen/activity_margin"
+	    android:background="@drawable/schedule_background"
+	    android:layout_alignParentTop="true"
+	    android:gravity="center">
+	    <TextView 
+	        android:id="@+id/rc_title"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" 
+	        android:text="@string/rc_header_text"
+	        android:textSize="32sp"
+	        android:textColor="@color/white"
+	        android:textStyle="bold"/>
+	    <LinearLayout 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_marginTop="@dimen/small_margin" >
+	        <TextView
+	        android:id="@+id/rc_header_from"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" 
+	        android:textSize="28sp"
+	        android:textStyle="bold" />
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="@dimen/small_margin"
+	            android:text="to"
+	            android:textSize="28sp"
+	            android:textColor="@color/white"
+	            android:textStyle="bold" />
+	    </LinearLayout>
+	    <TextView
+	        android:id="@+id/rc_header_to"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" 
+	        android:textSize="28sp"
+	        android:textStyle="bold"/>
+	</LinearLayout>
+    <!-- start of 1st route combo -->
+    <LinearLayout 
+        android:id="@+id/combo1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:background="@drawable/schedule_background"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_padding"
+        android:layout_below="@id/rc_header">
+    	<TextView 
+            android:id="@+id/combo_header1"
+        	android:layout_width = "match_parent"
+        	android:layout_height="wrap_content"
+        	android:text="@string/combo1_header"
+        	android:textColor="@color/white"
+        	android:textStyle="bold"
+        	android:textSize="30sp"
+        	android:gravity="center" />
+    	<!-- Caltrain trip details for 1st route combo -->
+        <TextView 
+            android:id="@+id/caltrain_header1"
+        	android:layout_width = "match_parent"
+        	android:layout_height="wrap_content"
+        	android:text="@string/caltrain_trip_header"
+        	android:textColor="@color/caltrain_red"
+        	android:textStyle="bold"
+        	android:textSize="26sp"
+        	android:gravity="left" />
+        <LinearLayout 
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="horizontal"
+    		android:paddingBottom="@dimen/activity_padding" >
+    	<TextView 
+        	android:id="@+id/train_number1"
+        	android:layout_width = "0dp"
+        	android:layout_weight="1.25"
+        	android:layout_height="wrap_content"
+        	android:textColor="@color/white"
+        	android:textSize="22sp"
+        	android:gravity="left"/>
+    	<TextView 
+    	    android:id="@+id/caltrain_trip1"
+    	    android:layout_width = "0dp"
+        	android:layout_weight="3.75"
+        	android:paddingLeft="@dimen/button_padding"
+        	android:layout_height="wrap_content"
+        	android:textColor="@color/white"
+        	android:textSize="22sp"
+        	android:gravity="center"/>
+    	<TextView 
+        	android:id="@+id/caltrain_trip_duration1"
+        	android:layout_width = "0dp"
+        	android:layout_weight = "2"
+        	android:layout_height="wrap_content"
+        	android:textColor="@color/white"
+        	android:textSize="22sp"
+        	android:gravity="right"/>
+		</LinearLayout>
+		<!-- DASH details for 1st route combo -->
+        <TextView 
+            android:id="@+id/dash_header1"
+        	android:layout_width = "match_parent"
+        	android:layout_height="wrap_content"
+        	android:text="@string/dash_trip_header"
+        	android:textColor="@color/main_blue"
+        	android:textStyle="bold"
+        	android:textSize="26sp"
+        	android:gravity="left" />
+		<LinearLayout 
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="horizontal"
+   			android:paddingBottom="@dimen/activity_padding" >
+   			<TextView 
+        		android:id="@+id/trip_number1"
+        		android:layout_width = "0dp"
+        		android:layout_weight="1.25"
+        		android:layout_height="fill_parent"
+        		android:textColor="@color/white"
+        		android:textSize="22sp"
+        		android:gravity="left"/>
+    		<TextView 
+        		android:id="@+id/dash_trip1"
+        		android:layout_width = "0dp"
+        		android:layout_weight="3.75"
+        		android:paddingLeft="@dimen/button_padding"
+        		android:layout_height="fill_parent"
+        		android:textColor="@color/white"
+        		android:textSize="22sp"
+        		android:gravity="center"/>
+    		<TextView 
+        		android:id="@+id/dash_trip_duration1"
+        		android:layout_width = "0dp"
+        		android:layout_weight = "2"
+        		android:layout_height="fill_parent"
+        		android:textColor="@color/white"
+        		android:textSize="22sp"
+        		android:gravity="right"/>
+		</LinearLayout>
+		<!-- Total travel time container for 1st route combo -->
+		<TextView 
+		    android:id="@+id/total_time1"
+		    android:layout_height="wrap_content"
+		    android:layout_width="wrap_content"
+		    android:textSize="22sp"
+		    android:textColor="@color/white"
+		    android:layout_marginTop="@dimen/activity_padding"/>
+    </LinearLayout>
+	
+    <!-- Start of 2nd route combo -->
+    <LinearLayout 
+        android:id="@+id/combo2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/schedule_background"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_padding"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:layout_below="@id/combo1">
+        <TextView 
+            android:id="@+id/combo_header2"
+        	android:layout_width = "match_parent"
+        	android:layout_height="wrap_content"
+        	android:text="@string/combo2_header"
+        	android:textColor="@color/white"
+        	android:textStyle="bold"
+        	android:textSize="30sp"
+        	android:gravity="center" />
+        <TextView 
+            android:id="@+id/caltrain_header2"
+        	android:layout_width = "match_parent"
+        	android:layout_height="wrap_content"
+        	android:text="@string/caltrain_trip_header"
+        	android:textColor="@color/caltrain_red"
+        	android:textStyle="bold"
+        	android:textSize="26sp"
+        	android:gravity="left" />
+        <LinearLayout 
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="horizontal"
+    		android:paddingBottom="@dimen/activity_padding" >
+    	<TextView 
+        	android:id="@+id/train_number2"
+        	android:layout_width = "0dp"
+        	android:layout_weight="1.25"
+        	android:layout_height="fill_parent"
+        	android:textColor="@color/white"
+        	android:textSize="22sp"
+        	android:gravity="left"/>
+    	<TextView 
+    	    android:id="@+id/caltrain_trip2"
+    	    android:layout_width = "0dp"
+        	android:layout_weight="3.75"
+        	android:paddingLeft="@dimen/button_padding"
+        	android:layout_height="fill_parent"
+        	android:textColor="@color/white"
+        	android:textSize="22sp"
+        	android:gravity="center"/>
+    	<TextView 
+        	android:id="@+id/caltrain_trip_duration2"
+        	android:layout_width = "0dp"
+        	android:layout_weight = "2"
+        	android:layout_height="fill_parent"
+        	android:textColor="@color/white"
+        	android:textSize="22sp"
+        	android:gravity="right"/>
+		</LinearLayout>
+		<!-- 2nd route combo DASH details -->
+        <TextView 
+            android:id="@+id/dash_header2"
+        	android:layout_width = "match_parent"
+        	android:layout_height="wrap_content"
+        	android:text="@string/dash_trip_header"
+        	android:textColor="@color/main_blue"
+        	android:textStyle="bold"
+        	android:textSize="26sp"
+        	android:gravity="left" />
+		<LinearLayout 
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="horizontal"
+   			android:paddingBottom="@dimen/activity_padding" >
+   			<TextView 
+        		android:id="@+id/trip_number2"
+        		android:layout_width = "0dp"
+        		android:layout_weight="1.25"
+        		android:layout_height="fill_parent"
+        		android:textColor="@color/white"
+        		android:textSize="22sp"
+        		android:gravity="left"/>
+    		<TextView 
+        		android:id="@+id/dash_trip2"
+        		android:layout_width = "0dp"
+        		android:layout_weight="3.75"
+        		android:paddingLeft="@dimen/button_padding"
+        		android:layout_height="fill_parent"
+        		android:textColor="@color/white"
+        		android:textSize="22sp"
+        		android:gravity="center"/>
+    		<TextView 
+        		android:id="@+id/dash_trip_duration2"
+        		android:layout_width = "0dp"
+        		android:layout_weight = "2"
+        		android:layout_height="fill_parent"
+        		android:textColor="@color/white"
+        		android:textSize="22sp"
+        		android:gravity="right"/>
+		</LinearLayout>
+		<!-- 2nd route combo total trip time -->
+		<TextView 
+		    android:id="@+id/total_time2"
+		    android:layout_height="wrap_content"
+		    android:textSize="22sp"
+		    android:textColor="@color/white"
+		    android:layout_width="wrap_content"
+		    android:layout_marginTop="@dimen/activity_padding"/>
+    </LinearLayout>
+    
+    <!-- 3rd route combo details -->
+    <LinearLayout 
+        android:id="@+id/combo3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/schedule_background"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_padding"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:layout_below="@id/combo2">
+        <!-- Route combo 3 header -->
+        <TextView 
+            android:id="@+id/combo_header3"
+        	android:layout_width = "match_parent"
+        	android:layout_height="wrap_content"
+        	android:text="@string/combo3_header"
+        	android:textColor="@color/white"
+        	android:textStyle="bold"
+        	android:textSize="30sp"
+        	android:gravity="center" />
+        <!-- Caltrain header and trip details for 3rd route combo -->
+        <TextView 
+            android:id="@+id/caltrain_header3"
+        	android:layout_width = "match_parent"
+        	android:layout_height="wrap_content"
+        	android:text="@string/caltrain_trip_header"
+        	android:textColor="@color/caltrain_red"
+        	android:textStyle="bold"
+        	android:textSize="26sp"
+        	android:gravity="left" />
+        <LinearLayout 
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="horizontal"
+    		android:paddingBottom="@dimen/listview_row_padding" >
+    	<TextView 
+        	android:id="@+id/train_number3"
+        	android:layout_width = "0dp"
+        	android:layout_weight="1.25"
+        	android:layout_height="fill_parent"
+        	android:textColor="@color/white"
+        	android:textSize="22sp"
+        	android:gravity="left"/>
+    	<TextView 
+    	    android:id="@+id/caltrain_trip3"
+    	    android:layout_width = "0dp"
+        	android:layout_weight="3.75"
+        	android:paddingLeft="@dimen/button_padding"
+        	android:layout_height="fill_parent"
+        	android:textColor="@color/white"
+        	android:textSize="22sp"
+        	android:gravity="center"/>
+    	<TextView 
+        	android:id="@+id/caltrain_trip_duration3"
+        	android:layout_width = "0dp"
+        	android:layout_weight = "2"
+        	android:layout_height="fill_parent"
+        	android:textColor="@color/white"
+        	android:textSize="22sp"
+        	android:gravity="right"/>
+		</LinearLayout>
+		<!-- Dash header and trip details for 3rd route combo -->
+		<TextView 
+            android:id="@+id/dash_header3"
+        	android:layout_width = "match_parent"
+        	android:layout_height="wrap_content"
+        	android:text="@string/dash_trip_header"
+        	android:textColor="@color/main_blue"
+        	android:textStyle="bold"
+        	android:textSize="26sp"
+        	android:gravity="left" />
+		<LinearLayout 
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="horizontal"
+   			android:paddingBottom="@dimen/activity_padding" >
+   			<TextView 
+        		android:id="@+id/trip_number3"
+        		android:layout_width = "0dp"
+        		android:layout_weight="1.25"
+        		android:layout_height="fill_parent"
+        		android:textColor="@color/white"
+        		android:textSize="22sp"
+        		android:gravity="left"/>
+    		<TextView 
+        		android:id="@+id/dash_trip3"
+        		android:layout_width = "0dp"
+        		android:layout_weight="3.75"
+        		android:paddingLeft="@dimen/button_padding"
+        		android:layout_height="fill_parent"
+        		android:textColor="@color/white"
+        		android:textSize="22sp"
+        		android:gravity="center"/>
+    		<TextView 
+        		android:id="@+id/dash_trip_duration3"
+        		android:layout_width = "0dp"
+        		android:layout_weight = "2"
+        		android:layout_height="fill_parent"
+        		android:textColor="@color/white"
+        		android:textSize="22sp"
+        		android:gravity="right"/>
+		</LinearLayout>
+		<!-- Container for total trip time of 3rd route combo -->
+		<TextView 
+		    android:id="@+id/total_time3"
+		    android:layout_height="wrap_content"
+		    android:layout_width="wrap_content"
+		    android:textColor="@color/white"
+		    android:textSize="22sp"
+		    android:layout_marginTop="@dimen/activity_padding"/>
+    </LinearLayout>
+    <TextView 
+        android:id="@+id/no_combos_available"
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content"
+        android:text="@string/route_combos_unavailable"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:background="@drawable/schedule_background"
+        android:padding="@dimen/activity_vertical_margin"/>
+</RelativeLayout>
+</ScrollView>

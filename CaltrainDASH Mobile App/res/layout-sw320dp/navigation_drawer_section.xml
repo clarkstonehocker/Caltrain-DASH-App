@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+    
+    <TextView
+       android:id="@+id/navmenusection_label"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:textSize="18sp"
+       android:paddingTop="@dimen/spinner_label_margin"
+       android:paddingBottom="@dimen/spinner_label_margin"
+       android:paddingLeft="@dimen/listview_row_padding"
+       android:textColor="@color/main_blue"
+       android:textStyle="bold" />
+    <View
+    	android:layout_height="2dp"
+    	android:layout_width="fill_parent"
+    	android:background="@color/main_blue"
+    	android:layout_below="@id/navmenusection_label" />
+</RelativeLayout>

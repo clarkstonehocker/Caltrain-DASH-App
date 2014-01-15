@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.seniorproject.caltraindashmobileapp"
+    android:versionCode="2"
+    android:versionName="1.1" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COURSE_LOCATION" />
+
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.seniorproject.caltraindashmobileapp.MainActivity"
+            android:label="@string/main_window_title"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.seniorproject.caltraindashmobileapp.ViewCaltrainActivity"
+            android:label="@string/title_activity_view_caltrain"
+            android:parentActivityName="com.seniorproject.caltraindashmobileapp.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.caltraindashmobileapp.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.seniorproject.caltraindashmobileapp.ViewDashActivity"
+            android:label="@string/title_activity_view_dash"
+            android:parentActivityName="com.seniorproject.caltraindashmobileapp.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.caltraindashmobileapp.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.seniorproject.caltraindashmobileapp.FindRouteCombosActivity"
+            android:label="@string/title_activity_find_route_combos"
+            android:parentActivityName="com.seniorproject.caltraindashmobileapp.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.caltraindashmobileapp.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.seniorproject.caltraindashmobileapp.CaltrainRouteMap"
+            android:label="@string/title_activity_caltrain_route_map"
+            android:parentActivityName="com.seniorproject.caltraindashmobileapp.ViewCaltrainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.caltraindashmobileapp.ViewCaltrainActivity" />
+        </activity>
+        <activity
+            android:name="com.seniorproject.caltraindashmobileapp.FindNearestStationActivity"
+            android:label="@string/title_activity_find_nearest_station"
+            android:parentActivityName="com.seniorproject.caltraindashmobileapp.ViewCaltrainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.seniorproject.caltraindashmobileapp.CaltrainTwitterActivity"
+            android:label="@string/title_activity_caltrain_twitter"
+            android:parentActivityName="com.seniorproject.caltraindashmobileapp.ViewCaltrainActivity" >
+        </activity>
+        <activity
+            android:name="com.seniorproject.caltraindashmobileapp.FindNearestStopActivity"
+            android:label="@string/title_activity_find_nearest_stop"
+            android:parentActivityName="com.seniorproject.caltraindashmobileapp.ViewDashActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.seniorproject.caltraindashmobileapp.DashRouteMapActivity"
+            android:label="@string/title_activity_dash_route_map"
+            android:parentActivityName="com.seniorproject.caltraindashmobileapp.ViewDashActivity" >
+        </activity>
+        <activity
+            android:name="com.seniorproject.caltraindashmobileapp.DashTwitterActivity"
+            android:label="@string/title_activity_dash_twitter"
+            android:parentActivityName="com.seniorproject.caltraindashmobileapp.ViewDashActivity" >
+        </activity>
+        <activity
+            android:name="com.seniorproject.caltraindashmobileapp.GoCaltrainTwitterActivity"
+            android:label="@string/title_activity_go_caltrain_twitter"
+            android:parentActivityName="com.seniorproject.caltraindashmobileapp.ViewCaltrainActivity" >
+        </activity>
+        <activity
+            android:name="com.seniorproject.caltraindashmobileapp.CaltrainNewsTwitterActivity"
+            android:label="@string/title_activity_caltrain_news_twitter"
+            android:parentActivityName="com.seniorproject.caltraindashmobileapp.ViewCaltrainActivity" >
+        </activity>
+        <activity
+            android:name="com.seniorproject.caltraindashmobileapp.DesignContributorActivity"
+            android:label="@string/title_activity_design_contributor"
+            android:parentActivityName="com.seniorproject.caltraindashmobileapp.MainActivity" >
+        </activity>
+    </application>
+
+</manifest>
